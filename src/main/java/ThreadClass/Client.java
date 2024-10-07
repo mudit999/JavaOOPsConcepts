@@ -23,7 +23,7 @@ public class Client {
         t1.start(); // run the thread
 
         // Print 1 to 100 using 100 different Thread
-        for(int i=1; i<=10000; i++){
+        for(int i=1; i<=100; i++){
             PrintNumber task = new PrintNumber(i);
             Thread t = new Thread(task);
             t.start();
