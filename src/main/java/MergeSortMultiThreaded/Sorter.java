@@ -39,6 +39,7 @@ public class Sorter implements Callable<List<Integer>> {
             rightHalf.add(arrayToSort.get(i));
         }
 
+        // creating this task so that a new thread can handle it
         Sorter taskForLeft = new Sorter(leftHalf, ex);
         Sorter taskForRight = new Sorter(rightHalf, ex);
 
