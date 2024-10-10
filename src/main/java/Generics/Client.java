@@ -1,6 +1,8 @@
 package Generics;
 
+import java.util.ArrayList;
 import java.util.HashMap;
+import java.util.List;
 
 public class Client {
     public static void main(String[] args) {
@@ -31,6 +33,34 @@ public class Client {
         // Type defined here
         Pair.<Integer, String>doSomethingStatic(23, "Mudit");
 
+
+        // Generics and Inheritance
+        Utils.simpleDoSomething(new Animal());
+        Utils.simpleDoSomething(new Dog());
+        Utils.simpleDoSomething(new Cat());
+
+        List<Animal> animals = new ArrayList<>();
+        Utils.doSomething(animals);
+
+        List<Dog> dogs = new ArrayList<>();
+        dogs.add(new Dog());
+        dogs.add(new Dog());
+        dogs.add(new Dog());
+        dogs.add(new Dog());
+
+//        Utils.doSomething(dogs);
+
+        List<Cat> cats = new ArrayList<>();
+//        Utils.doSomething(cats);
+
+
+        Utils.doSomethingModified(cats);
+
+        List<Cat> cat1 = Utils.doSomethingModified2(cats);
+        /*
+        We cannot store List of Dogs in List of Animals
+        We will have to explicitly define generic for that
+         */
 
     }
 }
