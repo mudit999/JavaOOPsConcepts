@@ -180,6 +180,12 @@ public class Client {
             // and a value greater than 0 if this string is lexicographically greater
             // than the string argument.
 
+            /*
+                num1.compareTo(num2)
+                -> if num1 < num2 -> returns -ve value
+                -> if num2 < num1 -> returns +ve value
+             */
+
             }
         });
 
